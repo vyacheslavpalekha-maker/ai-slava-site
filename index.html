@@ -62,7 +62,10 @@
 <header class="header">
   <div class="wrap header-inner">
     <a class="brand" href="#top"><img src="assets/logo/ai-slava-horizontal-on-dark.svg" alt="AI SLAVA"></a>
-    <nav class="nav" aria-label="Разделы сайта">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Разделы сайта">
       <a href="#automate">Что автоматизируем</a>
       <a href="#process">Как работаем</a>
       <a href="#case">Кейс</a>
@@ -79,8 +82,9 @@
   <section class="hero">
     <div class="wrap">
       <p class="kicker">Логистика · от диагностики до рабочего контура</p>
-      <h1>AI-автоматизация процессов в логистике: находим, где теряются время и деньги, и запускаем рабочий контур</h1>
-      <p class="lead">Начинаем с одного процесса. Считаем ручную работу в часах и рублях, показываем, что менять в первую очередь, и запускаем рабочий контур: правило, связку систем или ИИ-ассистента. Работаем поверх ваших систем: 1С, TMS, WMS, CRM, Excel, ЭДО и мессенджеры. Без миграции данных и остановки текущих операций. Для транспортных компаний, экспедиторов, таможенных брокеров, экспресс-доставки, складских операторов и корпоративных цепочек поставок.</p>
+      <h1>Находим потери в процессе и запускаем рабочий контур</h1>
+      <p class="lead">Начинаем с одного процесса. Считаем ручную работу в часах и рублях, показываем, что менять первым, и запускаем контур: правило, связку систем или ИИ-ассистента — без миграции данных и остановки операций.</p>
+      <p class="fine hero-scope">Работаем поверх 1С, TMS, WMS, CRM, Excel, ЭДО и мессенджеров. Для транспортных компаний, экспедиторов, таможенных брокеров, экспресс-доставки, складов и цепочек поставок.</p>
       <div class="hero-actions">
         <a class="btn" href="#quiz">Разобрать процесс: 15 минут бесплатно</a>
         <a class="btn ghost" href="https://t.me/vpalekha" target="_blank" rel="noopener">Написать в Telegram</a>
@@ -592,6 +596,7 @@
   </div>
 </footer>
 
+<script src="site.js" defer></script>
 <script src="quiz.js" defer></script>
 </body>
 </html>
