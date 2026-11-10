@@ -177,6 +177,7 @@
       if (!res.ok) throw new Error("webhook " + res.status);
       state.done = true;
       state.mock = false;
+      if (typeof ym === "function") ym(114165039, "reachGoal", "quiz_lead");
       render();
     }).catch(function () {
       state.done = true;
