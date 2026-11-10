@@ -68,7 +68,7 @@
   var local = host === "127.0.0.1" || host === "localhost";
   var WEBHOOK = local
     ? "http://127.0.0.1:5678/webhook/quiz-lead"
-    : ""; /* боевой webhook подставим, когда n8n будет на HTTPS */
+    : "https://n8n.aislava.space/webhook/quiz-lead";
 
   function otherKey(id) {
     return id + "Other";
