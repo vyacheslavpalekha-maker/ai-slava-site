@@ -69,6 +69,11 @@
   var WEBHOOK = local
     ? "http://127.0.0.1:5678/webhook/quiz-lead"
     : "https://n8n.aislava.space/webhook/quiz-lead";
+  var MAX_FIELD = 200;
+
+  function clip(s) {
+    return String(s || "").trim().slice(0, MAX_FIELD);
+  }
 
   function otherKey(id) {
     return id + "Other";
@@ -81,7 +86,7 @@
   }
 
   function otherText(id) {
-    return (state.answers[otherKey(id)] || "").trim();
+    return clip(state.answers[otherKey(id)]);
   }
 
   function withOther(val, id) {
@@ -118,9 +123,9 @@
 
   function canNext() {
     if (state.step >= screens.length) {
-      var name = (state.answers.name || "").trim();
-      var company = (state.answers.company || "").trim();
-      var contact = (state.answers.contact || "").trim();
+      var name = clip(state.answers.name);
+      var company = clip(state.answers.company);
+      var contact = clip(state.answers.contact);
       return name && company && contact && state.answers.consent;
     }
     var screen = screens[state.step];
@@ -156,9 +161,9 @@
       pain: withOther(state.answers.pain || [], "pain"),
       systems: withOther(state.answers.systems || [], "systems"),
       size: state.answers.size || "",
-      name: (state.answers.name || "").trim(),
-      company: (state.answers.company || "").trim(),
-      contact: (state.answers.contact || "").trim(),
+      name: clip(state.answers.name),
+      company: clip(state.answers.company),
+      contact: clip(state.answers.contact),
       consent: Boolean(state.answers.consent),
       pilot: Boolean(state.answers.pilot),
       source: "aislava-site-quiz-v05"
@@ -215,9 +220,9 @@
         '<div class="quiz-progress"><span>Предварительный разбор процесса</span><b>' + total + "/" + total + "</b></div>" +
         '<div class="quiz-bar"><i style="width:100%"></i></div>' +
         "<h3>Куда отправить предварительный разбор?</h3>" +
-        '<label class="quiz-field">Имя<input type="text" id="q-name" autocomplete="name" value="' + esc(state.answers.name || "") + '"></label>' +
-        '<label class="quiz-field">Компания и роль<input type="text" id="q-company" autocomplete="organization" value="' + esc(state.answers.company || "") + '"></label>' +
-        '<label class="quiz-field">Telegram, телефон или почта<input type="text" id="q-contact" autocomplete="tel" value="' + esc(state.answers.contact || "") + '"></label>' +
+        '<label class="quiz-field">Имя<input type="text" id="q-name" maxlength="200" autocomplete="name" value="' + esc(state.answers.name || "") + '"></label>' +
+        '<label class="quiz-field">Компания и роль<input type="text" id="q-company" maxlength="200" autocomplete="organization" value="' + esc(state.answers.company || "") + '"></label>' +
+        '<label class="quiz-field">Telegram, телефон или почта<input type="text" id="q-contact" maxlength="200" autocomplete="tel" value="' + esc(state.answers.contact || "") + '"></label>' +
         '<label class="quiz-check"><input type="checkbox" id="q-consent"' + (state.answers.consent ? " checked" : "") + '> Даю согласие на обработку персональных данных в соответствии с <a href="privacy.html">Политикой обработки персональных данных</a></label>' +
         '<label class="quiz-check"><input type="checkbox" id="q-pilot"' + (state.answers.pilot ? " checked" : "") + "> Интересует пилотная программа</label>" +
         '<div class="quiz-nav">' +
@@ -231,9 +236,9 @@
 
   function bindContacts() {
     function sync() {
-      state.answers.name = document.getElementById("q-name").value;
-      state.answers.company = document.getElementById("q-company").value;
-      state.answers.contact = document.getElementById("q-contact").value;
+      state.answers.name = clip(document.getElementById("q-name").value);
+      state.answers.company = clip(document.getElementById("q-company").value);
+      state.answers.contact = clip(document.getElementById("q-contact").value);
       state.answers.consent = document.getElementById("q-consent").checked;
       state.answers.pilot = document.getElementById("q-pilot").checked;
       document.getElementById("q-next").disabled = !canNext();
@@ -287,7 +292,7 @@
     var otherInput = document.getElementById("q-other");
     if (otherInput) {
       otherInput.addEventListener("input", function () {
-        state.answers[otherKey(screen.id)] = otherInput.value;
+        state.answers[otherKey(screen.id)] = clip(otherInput.value);
         document.getElementById("q-next").disabled = !canNext();
       });
       otherInput.addEventListener("keydown", function (e) {

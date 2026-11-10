@@ -15,5 +15,5 @@ ym(114165039, "init", {
   clickmap: true,
   trackLinks: true,
   accurateTrackBounce: true,
-  webvisor: true
+  webvisor: false
 });
