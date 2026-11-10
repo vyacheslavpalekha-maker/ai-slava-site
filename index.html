@@ -3,171 +3,436 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI SLAVA — аудит процессов и ИИ для логистики</title>
-  <meta name="description" content="Берём один процесс в логистике, считаем потери в часах и рублях и собираем рабочий контур: ассистента, отчёт или связку систем. Начинаем с разбора за 30 минут.">
+  <title>AI SLAVA — AI-автоматизация процессов в логистике</title>
+  <meta name="description" content="Находим, где теряются время и деньги в логистических процессах, и запускаем рабочий контур. Диагностика за 5 рабочих дней, первый контур за 10–14 рабочих дней.">
   <meta name="theme-color" content="#0B162A">
-  <meta property="og:title" content="AI SLAVA — аудит процессов и ИИ для логистики">
-  <meta property="og:description" content="Один процесс — один рабочий контур. Потери в часах и рублях, что делать первым, результат, которым можно пользоваться.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://aislava.space/">
+
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/case-cover.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="AI SLAVA">
+  <meta property="og:url" content="https://aislava.space/">
+  <meta property="og:title" content="AI SLAVA — AI-автоматизация процессов в логистике">
+  <meta property="og:description" content="AI-автоматизация процессов в логистике. Начинаем с одного процесса, фиксируем результат до следующего этапа.">
+  <meta property="og:image" content="https://aislava.space/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="AI SLAVA: AI-автоматизация процессов в логистике">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI SLAVA — AI-автоматизация процессов в логистике">
+  <meta name="twitter:description" content="Находим, где теряются время и деньги, и запускаем рабочий контур.">
+  <meta name="twitter:image" content="https://aislava.space/assets/og-image.png">
+
   <link rel="icon" href="assets/logo/ai-slava-mark-on-dark.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Manrope.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://aislava.space/#org",
+        "name": "AI SLAVA",
+        "url": "https://aislava.space/",
+        "logo": "https://aislava.space/assets/logo/ai-slava-mark-on-dark.svg",
+        "description": "AI-автоматизация процессов в логистике: диагностика, рабочий контур, сопровождение.",
+        "founder": { "@id": "https://aislava.space/#founder" },
+        "areaServed": "RU",
+        "knowsAbout": ["AI-автоматизация", "логистика", "диагностика процессов", "ИИ-ассистенты"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://aislava.space/#founder",
+        "name": "Вячеслав Палеха",
+        "jobTitle": "Основатель AI SLAVA",
+        "image": "https://aislava.space/assets/founder-portrait.jpg",
+        "worksFor": { "@id": "https://aislava.space/#org" },
+        "sameAs": ["https://www.linkedin.com/in/vyacheslav-palekha"]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <header class="header">
   <div class="wrap header-inner">
     <a class="brand" href="#top"><img src="assets/logo/ai-slava-horizontal-on-dark.svg" alt="AI SLAVA"></a>
-    <nav class="nav">
-      <a href="#services">Услуги</a>
+    <nav class="nav" aria-label="Разделы сайта">
+      <a href="#automate">Что автоматизируем</a>
       <a href="#process">Как работаем</a>
       <a href="#case">Кейс</a>
+      <a href="#terms">Условия</a>
       <a href="#about">Основатель</a>
       <a href="#contacts">Контакты</a>
     </nav>
-    <a class="btn" href="https://t.me/vpalekha" target="_blank" rel="noopener">Написать в Telegram</a>
+    <a class="btn" href="#quiz">Бесплатный разбор</a>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- 1. Главный экран и оффер -->
   <section class="hero">
     <div class="wrap">
-      <p class="kicker">Аудит процессов · цифровая трансформация · ИИ для логистики</p>
-      <h1>Найдём, где процесс теряет часы и деньги, и соберём рабочий контур</h1>
-      <p class="lead">Берём один процесс в логистике, считаем ручную работу в часах и рублях, говорим, что менять первым и что не трогать. Затем сдаём то, чем можно пользоваться: ассистента, отчёт или связку систем. Без «ИИ вообще» и размытых обещаний.</p>
+      <p class="kicker">Логистика · от диагностики до рабочего контура</p>
+      <h1>AI-автоматизация процессов в логистике: находим, где теряются время и деньги, и запускаем рабочий контур</h1>
+      <p class="lead">Начинаем с одного процесса. Считаем ручную работу в часах и рублях, показываем, что менять в первую очередь, и запускаем рабочий контур: правило, связку систем или ИИ-ассистента. Работаем поверх ваших систем: 1С, TMS, WMS, CRM, Excel, ЭДО и мессенджеры. Без миграции данных и остановки текущих операций. Для транспортных компаний, экспедиторов, таможенных брокеров, экспресс-доставки, складских операторов и корпоративных цепочек поставок.</p>
       <div class="hero-actions">
-        <a class="btn" href="https://t.me/vpalekha" target="_blank" rel="noopener">Разобрать процесс за 30 минут</a>
-        <a class="link-arrow" href="#case">Посмотреть кейс пилота <span aria-hidden="true">→</span></a>
+        <a class="btn" href="#quiz">Разобрать процесс: 15 минут бесплатно</a>
+        <a class="btn ghost" href="https://t.me/vpalekha" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+      <p class="fine hero-note">Отвечаем в течение рабочего дня.</p>
+      <div class="hero-founder">
+        <img src="assets/founder-avatar.jpg" alt="Вячеслав Палеха" width="56" height="56">
+        <div>
+          <b>Вячеслав Палеха, основатель AI SLAVA</b>
+          <span>28 лет в логистике, 11 лет в совете директоров международной логистической компании</span>
+        </div>
       </div>
       <div class="chips">
-        <span class="tag">28 лет в операционном управлении</span>
-        <span class="tag">Логистика, 3PL, доставка</span>
+        <span class="tag">28 лет в логистике</span>
+        <span class="tag">11 лет в совете директоров международной логистической компании</span>
         <span class="tag">Один процесс за раз</span>
       </div>
     </div>
   </section>
 
-  <!-- 2. Услуги -->
-  <section class="section alt" id="services">
+  <section class="proof" aria-label="Результат тестового проекта">
     <div class="wrap">
-      <div class="section-head">
-        <p class="kicker">Услуги</p>
-        <h2>С чего начинаем и что собираем</h2>
+      <p class="kicker">Результат тестового проекта</p>
+      <div class="proof-grid">
+        <div class="stat"><b>10 из 10</b><span>сценариев чек-листа пройдено</span></div>
+        <div class="stat"><b>15</b><span>регламентов в базе знаний</span></div>
+        <div class="stat"><b>2–3 с</b><span>время ответа</span></div>
       </div>
-      <div class="grid-3">
-        <article class="card service">
-          <img src="assets/icons/audit.svg" alt="">
-          <h3>Аудит процесса</h3>
-          <p>5 рабочих дней: карта процесса, потери в часах и рублях, страница «что делать первым и что не трогать».</p>
-        </article>
-        <article class="card service">
-          <img src="assets/icons/bot.svg" alt="">
-          <h3>Telegram-боты и ИИ-ассистенты</h3>
-          <p>Первая линия поддержки или внутренний помощник по регламентам. Ответ с источником, сложное уходит человеку.</p>
-        </article>
-        <article class="card service">
-          <img src="assets/icons/analytics.svg" alt="">
-          <h3>Разбор таблиц и отчёты</h3>
-          <p>Загрузили выгрузку CSV или Excel, спросили обычным языком, получили вывод, график и отчёт DOCX.</p>
-        </article>
-        <article class="card service">
-          <img src="assets/icons/calls.svg" alt="">
-          <h3>Разбор звонков и встреч</h3>
-          <p>Запись превращается в текст и список пропусков по вашему чек-листу, без прослушивания целиком.</p>
-        </article>
-        <article class="card service">
-          <img src="assets/icons/loop.svg" alt="">
-          <h3>Автоматизация рутины</h3>
-          <p>Связки на n8n, Python и SQL: заявка, сверка, уведомление, отчёт. Правило вместо ручного переноса.</p>
-        </article>
-        <article class="card service">
-          <img src="assets/icons/doc.svg" alt="">
-          <h3>Регламенты и база знаний</h3>
-          <p>Приводим документы в вид, по которому ассистент отвечает без выдумок и показывает источник.</p>
-        </article>
-      </div>
-      <p class="fine note">Стоимость называем после короткого разбора: она зависит от процесса и объёма. Внедрение не стартуем без цифры потерь.</p>
+      <p class="fine">Тестовый проект на открытых регламентах транспортной компании. Подробности ниже, в разделе «Кейс».</p>
     </div>
   </section>
 
-  <!-- 3. Процесс работы -->
-  <section class="section" id="process">
+  <section class="section alt" id="segments">
     <div class="wrap">
       <div class="section-head">
-        <p class="kicker">Подход к работе</p>
-        <h2>Не начинаю с выбора инструмента</h2>
-        <p class="lead" style="margin-top:16px">Автоматизация ради автоматизации сжигает бюджет. Поэтому четыре шага, и следующий не начинается, пока не виден результат предыдущего.</p>
+        <p class="kicker">Для кого</p>
+        <h2>Для кого мы работаем</h2>
+        <p class="lead" style="margin-top:16px">Для компаний, где заявки и статусы уже в системе, а исключения, документы, сверка и обращения клиентов обрабатываются вручную.</p>
       </div>
+      <div class="seg-grid">
+        <article class="card seg">
+          <img src="assets/icons/s1-ekspress.svg" alt="" width="48" height="48">
+          <h3>Экспресс-доставка и курьерские сети</h3>
+          <p class="mock-label">Где теряется время</p>
+          <ul>
+            <li>«Где мой груз»: типовые обращения занимают операторов</li>
+            <li>Переносы, возвраты и претензии ведутся перепиской</li>
+            <li>Документы и статусы по международным отправкам собираются вручную</li>
+          </ul>
+        </article>
+        <article class="card seg">
+          <img src="assets/icons/s2-ekspeditory.svg" alt="" width="48" height="48">
+          <h3>Экспедиторы и таможенные брокеры</h3>
+          <p class="mock-label">Где теряется время</p>
+          <ul>
+            <li>Заявки и котировки приходят письмами и в мессенджерах</li>
+            <li>Комплектность документов и коды ТН ВЭД проверяют вручную, клиента спрашивают повторно</li>
+            <li>Данные инвойсов переносят из системы в систему вручную</li>
+          </ul>
+        </article>
+        <article class="card seg">
+          <img src="assets/icons/s3-avtotransport.svg" alt="" width="48" height="48">
+          <h3>Автотранспортные и логистические компании</h3>
+          <p class="mock-label">Где теряется время</p>
+          <ul>
+            <li>Сверка счетов подрядчиков и закрывающие документы идут после рейса неделями</li>
+            <li>Исключения по рейсу решаются в чате, клиент узнаёт о срыве от получателя</li>
+            <li>Прибыль считают по компании, убыточный маршрут не виден</li>
+          </ul>
+        </article>
+        <article class="card seg">
+          <img src="assets/icons/s4-supply-chain.svg" alt="" width="48" height="48">
+          <h3>Корпоративные цепочки поставок и склады</h3>
+          <p class="mock-label">Где теряется время</p>
+          <ul>
+            <li>Заявки внутренних клиентов перебивают в кабинеты перевозчиков вручную</li>
+            <li>Счета транспортных компаний сверяют вручную</li>
+            <li>Складские заявки, сроки и качество подрядчиков собирают из выгрузок и чатов</li>
+          </ul>
+        </article>
+      </div>
+      <p class="fine note">Работаем и с другими участниками рынка: 3PL и 4PL-операторами. Начинаем с разбора процесса. Эффект зависит от объёма, качества данных и владельца процесса.</p>
+    </div>
+  </section>
+
+  <section class="section" id="automate">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Процессы</p>
+        <h2>Что мы автоматизируем</h2>
+        <p class="lead" style="margin-top:16px">Один процесс на первом этапе. Остальные берём после результата первого.</p>
+      </div>
+      <div class="auto-grid">
+        <article class="card auto">
+          <img src="assets/icons/c1-zayavki.svg" alt="" width="48" height="48">
+          <h3>Заявки и расчёт ставок</h3>
+          <p><b>Где теряется время.</b> Заявки приходят письмами и в мессенджерах, расчёт собирают вручную.</p>
+          <p><b>Что делаем.</b> Принимаем заявку из любого канала, собираем параметры груза, готовим предварительный расчёт по вашим тарифам.</p>
+          <p><b>Что получаете.</b> Структурированную карточку заявки для менеджера и расчёт за минуты.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c2-dokumenty.svg" alt="" width="48" height="48">
+          <h3>Документы и сверка</h3>
+          <p><b>Где теряется время.</b> Счета, акты, инвойсы и коммерческие предложения сверяют глазами.</p>
+          <p><b>Что делаем.</b> Извлекаем данные из документов, сравниваем с тарифом и заявкой, показываем расхождения.</p>
+          <p><b>Что получаете.</b> Таблицу сверки и список расхождений с указанием документа.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c3-tamozhnya.svg" alt="" width="48" height="48">
+          <h3>Таможенное оформление и ВЭД</h3>
+          <p><b>Где теряется время.</b> Комплектность пакета документов проверяют вручную, данные переносят из инвойсов и упаковочных листов в декларацию, клиента спрашивают повторно.</p>
+          <p><b>Что делаем.</b> Проверяем комплектность пакета, извлекаем данные из инвойсов и упаковочных листов, готовим варианты кодов ТН ВЭД для проверки декларантом, ведём статусы выпуска.</p>
+          <p><b>Что получаете.</b> Готовую к проверке карточку отправки и список недостающих документов. Решение по коду и декларации принимает декларант.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c4-statusy.svg" alt="" width="48" height="48">
+          <h3>Статусы и исключения</h3>
+          <p><b>Где теряется время.</b> Клиенты спрашивают «где груз», о срывах рейса узнают поздно.</p>
+          <p><b>Что делаем.</b> Отвечаем по статусам из ваших систем, уведомляем клиента о задержке, выстраиваем правила эскалации исключений.</p>
+          <p><b>Что получаете.</b> Меньше типовых обращений и срыв рейса, видимый в день его возникновения.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c5-pretenzii.svg" alt="" width="48" height="48">
+          <h3>Претензии и рекламации</h3>
+          <p><b>Где теряется время.</b> Пакет документов и хронологию собирают вручную.</p>
+          <p><b>Что делаем.</b> Собираем пакет по чек-листу, выстраиваем хронологию по документам, готовим черновик ответа.</p>
+          <p><b>Что получаете.</b> Черновик претензионного ответа. Подписывает юрист.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c6-klientskiy-servis.svg" alt="" width="48" height="48">
+          <h3>Клиентский сервис</h3>
+          <p><b>Где теряется время.</b> Операторы отвечают на одни и те же вопросы.</p>
+          <p><b>Что делаем.</b> Собираем базу знаний по вашим регламентам, ассистент отвечает со ссылкой на документ и раздел, сложное передаёт оператору.</p>
+          <p><b>Что получаете.</b> Ответ за секунды и меньшую нагрузку на операторов.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c7-kontrol-kachestva.svg" alt="" width="48" height="48">
+          <h3>Контроль качества</h3>
+          <p><b>Где теряется время.</b> Прослушивают выборочные звонки и читают выборочные переписки.</p>
+          <p><b>Что делаем.</b> Расшифровываем звонок или встречу, оцениваем по чек-листу вашей компании, отмечаем пропуски.</p>
+          <p><b>Что получаете.</b> Отчёт по каждой записи без прослушивания целиком.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c8-prodazhi.svg" alt="" width="48" height="48">
+          <h3>Продажи и входящие лиды</h3>
+          <p><b>Где теряется время.</b> Заявки теряются между каналами, менеджеры вводят данные вручную.</p>
+          <p><b>Что делаем.</b> Собираем данные клиента в диалоге, оцениваем заявку, передаём менеджеру в вашу систему.</p>
+          <p><b>Что получаете.</b> Единую очередь заявок с приоритетом.</p>
+        </article>
+        <article class="card auto">
+          <img src="assets/icons/c9-hr-obuchenie.svg" alt="" width="48" height="48">
+          <h3>HR и обучение</h3>
+          <p><b>Где теряется время.</b> Новичков вводят в работу вручную, знания проверяют выборочно.</p>
+          <p><b>Что делаем.</b> Наставник по регламентам ведёт нового сотрудника, проверяет знания, передаёт результат руководителю.</p>
+          <p><b>Что получаете.</b> Быстрый ввод в должность и проверку знаний с результатом.</p>
+        </article>
+      </div>
+      <p class="fine note">Если вашего процесса нет в списке, опишите его на разборе. Подходит любой повторяющийся процесс, где результат можно посчитать.</p>
+      <p style="margin-top:22px"><a class="btn" href="#quiz">Разобрать процесс</a></p>
+    </div>
+  </section>
+
+  <section class="section alt" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Как работаем</p>
+        <h2>Как работаем: четыре шага и один ответственный</h2>
+        <p class="lead" style="margin-top:16px">Следующий шаг не начинается, пока не виден результат предыдущего.</p>
+      </div>
+      <figure class="scheme">
+        <img src="assets/schemes/scheme-1-process-asis-tobe.svg" alt="Пример процесса заявки: как есть и как может стать после первого контура" width="1040" height="640" loading="lazy">
+      </figure>
+      <figure class="scheme">
+        <img src="assets/schemes/scheme-2-four-steps.svg" alt="Четыре шага: разбор, диагностика, первый контур, сопровождение" width="1040" height="400" loading="lazy">
+      </figure>
       <div class="steps">
-        <article class="step card">
-          <div class="num">01</div>
-          <h3>Короткий разбор</h3>
+        <article class="card step">
+          <div class="num">Шаг 1</div>
+          <h3>Разбор</h3>
+          <p class="when">15 минут, бесплатно</p>
           <p>Один процесс, один созвон. Понимаем, есть ли что считать и подходит ли задача под первый этап.</p>
-          <span class="tag when">30 минут</span>
         </article>
-        <article class="step card">
-          <div class="num">02</div>
-          <h3>Диагностика и границы</h3>
-          <p>Карта «как есть», потери в часах и рублях, три гипотезы. Фиксируем границы: один процесс, срок, бюджет.</p>
-          <span class="tag when">5 рабочих дней</span>
+        <article class="card step">
+          <div class="num">Шаг 2</div>
+          <h3>Диагностика</h3>
+          <p class="when">5 рабочих дней</p>
+          <p>Карта процесса «как есть», потери в часах и рублях, три гипотезы. Фиксируем границы первого этапа: процесс, срок, бюджет.</p>
         </article>
-        <article class="step card">
-          <div class="num">03</div>
-          <h3>Первый контур</h3>
-          <p>Собираю сам: правило, связка систем или ассистент. Решающее слово за человеком. Передаю рабочий инструмент с документацией, а не презентацию с планами.</p>
-          <span class="tag when">срок до старта</span>
+        <article class="card step">
+          <div class="num">Шаг 3</div>
+          <h3>Первый рабочий контур</h3>
+          <p class="when">10–14 рабочих дней, срок фиксируем до старта</p>
+          <p>Самый простой способ, который закрывает потерю: правило, связка систем или ассистент. Решение остаётся за сотрудником. Передаём рабочий инструмент с инструкцией.</p>
         </article>
-        <article class="step card">
-          <div class="num">04</div>
-          <h3>Расширение по цифрам</h3>
-          <p>Следующий процесс берём только после эффекта на текущем. Без «автоматизируем всё и сразу».</p>
-          <span class="tag when">по результату</span>
+        <article class="card step">
+          <div class="num">Шаг 4</div>
+          <h3>Сопровождение и расширение</h3>
+          <p class="when">по результату</p>
+          <p>Следим за работой, исправляем сбои, дорабатываем по согласованным правилам. Следующий процесс берём после эффекта на текущем.</p>
         </article>
       </div>
+      <p style="margin-top:28px"><a class="btn" href="#quiz">Разобрать процесс: 15 минут бесплатно</a></p>
     </div>
   </section>
 
-  <!-- Что на выходе диагностики -->
-  <section class="section alt" id="deliverable">
+  <section class="section" id="deliverable">
     <div class="wrap deliver">
       <div>
         <p class="kicker">Что вы получаете</p>
-        <h2>После диагностики остаётся порядок работы, а не устная договорённость</h2>
+        <h2>После диагностики остаётся порядок работы</h2>
         <ul class="check">
-          <li><b>Карта процесса</b> как есть: основной путь и слой исключений.</li>
-          <li><b>Таблица потерь</b> в часах и рублях: формула, источник, метка достоверности.</li>
+          <li><b>Карта процесса</b> как есть: основной путь и исключения.</li>
+          <li><b>Таблица потерь</b> в часах и рублях: формула, источник, пометка о достоверности.</li>
           <li><b>Три гипотезы</b> и очередь изменений на 30, 90 и 365 дней.</li>
-          <li><b>Страница решения</b>: что делать первым и что сознательно не трогать.</li>
+          <li><b>Страница решения:</b> что делать первым и что оставить как есть.</li>
+          <li><b>Рамка первого контура:</b> что делаем, за какой срок, по какому критерию принимаем результат.</li>
         </ul>
-        <p class="fine">Каждая цифра в отчёте с меткой: измерено, рассчитано, оценка или неизвестно. Если данных нет, так и пишем, ноль не подставляем.</p>
+        <p class="fine">Каждая цифра в отчёте имеет пометку: измерено, рассчитано, оценка или неизвестно. Если данных нет, мы пишем об этом и не подставляем значение.</p>
+        <p style="margin-top:22px"><a class="btn" href="assets/AI-SLAVA_obrazets_otcheta_diagnostiki.pdf" target="_blank" rel="noopener">Скачать образец отчёта (PDF)</a></p>
+        <p class="fine" style="margin-top:10px">4 страницы. Пример формата: компания вымышленная, данные условные.</p>
       </div>
-      <div class="mock" aria-label="Пример формата страницы решения">
-        <div class="mock-top"><span class="tag">Страница решения</span><span class="fine">пример формата, данные условные</span></div>
-        <div class="mock-title">Сверка счетов подрядчиков</div>
-        <div class="mock-cols">
-          <div class="mock-col first">
-            <div class="mock-label">Делать первым</div>
-            <p>Правило закрытия счёта и эталон тарифа.</p>
+      <div>
+        <div class="mock" aria-label="Пример формата страницы решения">
+          <div class="mock-top"><span class="tag">Страница решения</span><span class="fine">пример формата, данные условные</span></div>
+          <div class="mock-title">Сверка счетов подрядчиков</div>
+          <div class="mock-cols">
+            <div class="mock-col first">
+              <div class="mock-label">Делать первым</div>
+              <p>Правило закрытия счёта и эталон тарифа.</p>
+            </div>
+            <div class="mock-col">
+              <div class="mock-label">Не трогать</div>
+              <p>TMS и 1С. Агента ставим только после правила.</p>
+            </div>
           </div>
-          <div class="mock-col not">
-            <div class="mock-label">Не трогать</div>
-            <p>TMS и 1С. Агента ставим только после правила.</p>
+          <div class="mock-label" style="margin-top:20px">Метки цифр в отчёте</div>
+          <div class="labels">
+            <span class="tag">измерено</span>
+            <span class="tag">рассчитано</span>
+            <span class="tag">оценка</span>
+            <span class="tag">неизвестно</span>
           </div>
-        </div>
-        <div class="mock-label" style="margin-top:20px">Метки цифр в отчёте</div>
-        <div class="labels">
-          <span class="tag">измерено</span>
-          <span class="tag">рассчитано</span>
-          <span class="tag">оценка</span>
-          <span class="tag">неизвестно</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Кому подходит -->
+  <section class="section alt" id="case">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Кейс · Логистика</p>
+        <h2 class="h2-case-intro">Ассистент первой линии для грузоперевозчика: ответ по регламенту за 2–3 секунды</h2>
+        <p class="lead" style="margin-top:16px">Транспортная компания. Тестовый проект на открытых регламентах.</p>
+      </div>
+      <div class="case">
+        <div class="case-text">
+          <div class="case-stats">
+            <div class="stat"><b>10 из 10</b><span>сценариев чек-листа</span></div>
+            <div class="stat"><b>15</b><span>регламентов в базе</span></div>
+            <div class="stat"><b>2–3 с</b><span>время ответа</span></div>
+          </div>
+          <p><b>Задача.</b> Операторы тратят время на типовые вопросы: тарифы, упаковка, документы, претензии. Ответ должен быть точным и ссылаться на регламент.</p>
+          <p><b>Что сделано.</b> Ассистент в Telegram принимает вопрос клиента, находит ответ в базе из 15 регламентов, называет документ и раздел. Запрещённые к перевозке грузы распознаются до обращения к модели, вопросы вне темы получают вежливый отказ, а попытки сменить роль ассистента передаются оператору.</p>
+          <p><b>Как проверяли.</b> Тестовый чек-лист из 10 сценариев. После корректировки доля ответов с указанием источника выросла с 43% до 100%.</p>
+          <p><b>Что остаётся у сотрудника.</b> Сложные случаи, претензии, исключения и все решения, которые влияют на деньги или условия перевозки.</p>
+          <div class="hero-actions" style="margin-top:22px">
+            <a class="btn" href="https://honored-banon-29a.notion.site/40d734b9f0ef81c786ecd1979ff9c28f" target="_blank" rel="noopener">Читать кейс целиком</a>
+            <a class="btn ghost" href="#quiz">Обсудить такой контур для вашей компании</a>
+          </div>
+          <p class="fine" style="margin-top:16px">Проект выполнен на открытых материалах и не является внедрением в конкретной компании. Цифры получены по результатам прогона 21.07.2026. Эффект зависит от объёма и качества регламентов.</p>
+        </div>
+        <div class="case-media">
+          <figure class="scheme">
+            <img src="assets/schemes/scheme-3-assistant-flow.svg" alt="Сценарий ассистента: вопрос клиента, проверка, поиск по регламентам, ответ или передача оператору" width="1040" height="440" loading="lazy">
+          </figure>
+          <div class="demo">
+            <video controls preload="metadata" playsinline poster="assets/pek-bot-demo-poster.jpg" aria-label="Запись диалога в Telegram">
+              <source src="assets/pek-bot-demo.mp4" type="video/mp4">
+            </video>
+            <div class="demo-text">
+              <div class="mock-label">Запись · 0:52 · ускорено в 3 раза</div>
+              <p>Диалог в Telegram: тариф, упаковка, документы, терминал, претензия.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="terms">
+    <div class="wrap narrow">
+      <div class="section-head">
+        <p class="kicker">Условия работы</p>
+        <h2>Условия работы</h2>
+        <p class="lead" style="margin-top:16px">До старта фиксируем, что входит в этап, сколько он занимает и какой результат вы получаете.</p>
+      </div>
+      <details class="acc">
+        <summary>Сроки, бюджет, объём</summary>
+        <p>Диагностика занимает 5 рабочих дней. Стоимость, срок и объём диагностики и первого контура фиксируем до старта. Объём не расширяем без отдельного согласования. То, что не входит в этап, указываем в договоре.</p>
+      </details>
+      <details class="acc">
+        <summary>Договор и ответственность</summary>
+        <p>Работаем по договору: фиксируем этап, оплату и результат. У проекта один ответственный: менеджер проекта ведёт задачу от разбора до сдачи и отвечает за срок.</p>
+      </details>
+      <details class="acc">
+        <summary>Передача и сопровождение</summary>
+        <p>После запуска вы получаете инструкцию «кто что делает», журнал работы системы и доступы. Сопровождение (мониторинг, исправление сбоев, доработки по правилам) оформляем отдельным этапом.</p>
+      </details>
+      <details class="acc">
+        <summary>Данные и безопасность</summary>
+        <p>Для диагностики достаточно выгрузок, логины и пароли рабочих систем не нужны. Если в проекте есть персональные данные, по умолчанию храним их в России и подписываем соглашение о неразглашении. Что передавать, согласуем заранее.</p>
+      </details>
+      <details class="acc">
+        <summary>Что остаётся у сотрудников</summary>
+        <p>Юридически значимые действия (ставка клиенту, претензия, платёж, допуск водителя) выполняет человек. ИИ готовит черновик, система ведёт журнал, у действий есть возможность отката.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section alt" id="pilot">
+    <div class="wrap">
+      <div class="pilot card">
+        <div>
+          <p class="kicker">Пилотная программа</p>
+          <h2>Три проекта на специальных условиях</h2>
+          <p class="lead" style="margin-top:16px">Первые три проекта получают специальные условия на первый рабочий контур, а мы взамен получаем право опубликовать обезличенный результат. Условия обсуждаем в разговоре.</p>
+          <p style="margin-top:22px"><a class="btn" href="#quiz">Обсудить условия пилота</a></p>
+        </div>
+        <div class="pilot-cols">
+          <div>
+            <div class="mock-label">Что вы получаете</div>
+            <ul class="check">
+              <li>Диагностику одного процесса за 5 рабочих дней</li>
+              <li>Карту процесса, потери в часах и рублях, три гипотезы</li>
+              <li>Страницу «что делать первым и что оставить как есть»</li>
+              <li>Пилотные условия на первый рабочий контур</li>
+            </ul>
+          </div>
+          <div>
+            <div class="mock-label">Что нужно от вашей стороны</div>
+            <ul class="check">
+              <li>Владельца процесса</li>
+              <li>Выгрузки из TMS или 1С за 3 месяца</li>
+              <li>Три интервью по 40 минут</li>
+              <li>Согласие на публикацию обезличенного отчёта и короткого отзыва</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="fit">
     <div class="wrap">
       <div class="section-head">
@@ -176,130 +441,144 @@
       </div>
       <div class="split">
         <article class="card fit yes">
-          <h3>Подходит</h3>
+          <h3>Подходит компаниям, где:</h3>
           <ul>
-            <li>Экспедитор, перевозчик, 3PL или склад с повторяющимся процессом</li>
-            <li>Заявка и статусы уже в системе, а исключения, сверка и документы по-прежнему руками</li>
-            <li>Малый бизнес, если эффект можно посчитать в рублях и часах</li>
-            <li>Есть владелец процесса и доступ к выгрузкам</li>
+            <li>есть повторяющийся процесс: экспресс-доставка, агентирование, таможенное оформление, перевозки, корпоративная логистика;</li>
+            <li>заявки и статусы уже в системе, а исключения, сверка, документы и обращения обрабатываются вручную;</li>
+            <li>есть владелец процесса и доступ к выгрузкам;</li>
+            <li>эффект можно посчитать в часах и рублях.</li>
           </ul>
         </article>
         <article class="card fit no">
-          <h3>Не подходит</h3>
+          <h3>Не подходит, если:</h3>
           <ul>
-            <li>Нет повторяющегося процесса, есть разовые пожары</li>
-            <li>Сразу нужен агент, а какой контур чинить, неясно</li>
-            <li>«Нейросеть на всю компанию» без владельца и без цифры</li>
-            <li>Задача закрывается макросом в Excel. Скажу об этом прямо</li>
+            <li>нет повторяющегося процесса, есть разовые срочные задачи;</li>
+            <li>нужен ИИ-агент, а какой процесс исправлять, не определено;</li>
+            <li>запрос звучит как «нейросеть на всю компанию» без владельца и без цифр;</li>
+            <li>задачу решает макрос в Excel. В этом случае мы скажем об этом сразу.</li>
           </ul>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- 4. Кейс -->
-  <section class="section alt" id="case">
-    <div class="wrap">
-      <div class="case">
-        <div class="case-media">
-          <div class="case-cover"><img src="assets/case-cover.png" alt="Обложка кейса: ответ по регламенту за 2–3 секунды" loading="lazy"></div>
-          <div class="demo">
-            <video controls preload="metadata" playsinline poster="assets/pek-bot-demo-poster.jpg" aria-label="Демо-запись диалога с ботом">
-              <source src="assets/pek-bot-demo.mp4" type="video/mp4">
-            </video>
-            <div class="demo-text">
-              <div class="mock-label">Демо · 0:52 · ускорено в 3 раза</div>
-              <p>Живой диалог в Telegram: тариф, упаковка, документы, терминал, претензия. В каждом ответе документ и раздел. На вопросы вне темы бот отказывает, а попытку сменить роль передаёт оператору.</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <span class="tag result">Кейс · логистика · учебный пилот</span>
-          <h2>Ответ по регламенту <span style="white-space:nowrap">за 2–3 секунды</span></h2>
-          <p class="muted">ИИ-ассистент первой линии для грузоперевозчика в Telegram. Закрывает типовые вопросы по регламентам, в каждом ответе называет документ и раздел, а оператору передаёт только сложное.</p>
-          <div class="case-stats">
-            <div class="stat"><b>10 из 10</b><span>сценариев чек-листа</span></div>
-            <div class="stat"><b>15</b><span>регламентов в базе</span></div>
-            <div class="stat"><b>2–3 с</b><span>время ответа</span></div>
-          </div>
-          <ul class="case-points">
-            <li>Источник в каждом ответе: было 43%, стало 100% после правки промпта.</li>
-            <li>Запрещённые грузы перехватываются до модели, вне темы бот вежливо отказывает.</li>
-            <li>Стек: Telegram, n8n, Pinecone, YandexGPT Lite.</li>
-          </ul>
-          <a class="btn" href="https://honored-banon-29a.notion.site/40d734b9f0ef81c786ecd1979ff9c28f" target="_blank" rel="noopener">Читать кейс целиком</a>
-          <p class="fine" style="margin-top:16px">Пилот на открытых материалах. Не коммерческий заказ. Цифры из прогона по чек-листу 21.07.2026.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ещё работы -->
-  <section class="section" id="works">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="kicker">Ещё работы</p>
-        <h2>Другие контуры, которые уже собраны</h2>
-      </div>
-      <div class="grid-3">
-        <article class="card work">
-          <span class="tag">Веб-сервис</span>
-          <h3>AI-аналитик таблиц</h3>
-          <p>Загружаете CSV или Excel, пишете запрос обычным языком и получаете вывод, график и отчёт DOCX в одном диалоге. Развёрнут в Docker, открывается по ссылке.</p>
-          <span class="fine mono">Python · FastAPI · pandas · YandexGPT</span>
-        </article>
-        <article class="card work">
-          <span class="tag">Демо-контур</span>
-          <h3>ИИ-аудит звонков</h3>
-          <p>Telegram-бот принимает запись, расшифровывает и показывает пропуски по списку критериев. В демо: аудит ввода в должность, 11 блоков. Не коммерческий заказ.</p>
-          <span class="fine mono">Python · Telegram · AssemblyAI · PostgreSQL</span>
-        </article>
-        <article class="card work">
-          <span class="tag">Пилот</span>
-          <h3>ИИ-наставник ВЭД</h3>
-          <p>Ведёт нового менеджера по базисам поставки в Telegram и не засчитывает близкий ответ без обязательной детали. Руководителю остаётся итог теста.</p>
-          <span class="fine mono">Telegram · aiogram · OpenAI · PostgreSQL</span>
-        </article>
-      </div>
-      <p class="fine note">Подробности и демо: <a href="https://marketplace.zerocoder.ru/zerocoder/21934" target="_blank" rel="noopener">профиль студии на маркетплейсе Zerocoder</a>.</p>
-    </div>
-  </section>
-
-  <!-- Основатель -->
   <section class="section alt" id="about">
     <div class="wrap">
       <div class="founder">
-        <img src="assets/founder.jpg" alt="Вячеслав Палеха, основатель AI SLAVA" loading="lazy">
+        <div class="founder-photos">
+          <figure>
+            <img src="assets/founder-stage.jpg" alt="Вячеслав Палеха выступает на отраслевом мероприятии" width="1111" height="1389" loading="lazy">
+            <figcaption>Выступление на отраслевом мероприятии</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/founder-portrait.jpg" alt="Вячеслав Палеха, основатель AI SLAVA" width="1080" height="1349" loading="lazy">
+            <figcaption>Вячеслав Палеха</figcaption>
+          </figure>
+        </div>
         <div>
-          <p class="kicker">Об авторе</p>
-          <h2>Вячеслав Палеха. Говорю на языке сроков, бюджета и результата</h2>
-          <p class="muted">Основной профиль: логистика, 3PL, доставка. Беру и задачи малого бизнеса, если эффект можно посчитать в рублях и часах.</p>
-          <p class="muted">Я знаю, как процесс работает изнутри, прежде чем начать его автоматизировать. Поэтому разговор идёт про сроки, оборот и маржу, а не про нейросети ради нейросетей. Контур собираю сам: Python, Telegram, n8n, SQL и нейросети.</p>
+          <p class="kicker">Об основателе</p>
+          <h2>Вячеслав Палеха, основатель AI SLAVA</h2>
+          <p class="muted">28 лет в логистике, из них 11 лет в совете директоров международной логистической компании: региональное управление и стратегическое развитие, операционное управление, продажи и маркетинг в России. Рост EBITA на 25% и выручки более чем на 20% год к году, более 150 партнёрских центров.</p>
+          <p class="muted">Сначала определяем, где процесс теряет время, деньги и качество. Затем предлагаем только те решения, которые можно объяснить, посчитать и внедрить без лишнего масштаба. Контур собираем сами, без смены ваших систем. Связки и сценарии — Python, n8n, SQL; ответы по регламентам — база знаний; мессенджеры — Telegram и другие. Запускаем в контуре заказчика, в том числе в Docker. У проекта один ответственный — руководитель проекта.</p>
         </div>
       </div>
       <div class="facts">
-        <div class="stat"><b>28</b><span>лет в операционном управлении</span></div>
-        <div class="stat"><b>11</b><span>лет в совете директоров</span></div>
-        <div class="stat"><b>10 из 10</b><span>сценариев чек-листа в пилоте</span></div>
+        <div class="stat"><b>28</b><span>лет в логистике</span></div>
+        <div class="stat"><b>11</b><span>лет в совете директоров международной логистической компании</span></div>
+        <div class="stat"><b>EBITA +25%</b><span>год к году (YoY): при снижении затрат на 20%</span></div>
+        <div class="stat"><b>&gt;20%</b><span>рост выручки год к году (YoY)</span></div>
+        <div class="stat"><b>&gt;150</b><span>партнёрских центров</span></div>
       </div>
+      <p class="fine note">Показатели: международная логистическая компания, Россия. Это опыт основателя. Кейсы AI SLAVA публикуются отдельно, с цифрами и подтверждением клиента.</p>
     </div>
   </section>
 
-  <!-- 5. Контакты -->
+  <section class="section" id="faq">
+    <div class="wrap narrow">
+      <div class="section-head">
+        <p class="kicker">Вопросы</p>
+        <h2>Что обычно спрашивают до разговора</h2>
+      </div>
+      <details class="acc">
+        <summary>Сколько это стоит?</summary>
+        <p>Разбор на 15 минут бесплатный. Стоимость диагностики и первого рабочего контура определяем индивидуально: она зависит от процесса и объёма. Для первых трёх проектов действуют пилотные условия.</p>
+      </details>
+      <details class="acc">
+        <summary>У нас уже всё в TMS и 1С. Что тут автоматизировать?</summary>
+        <p>Системы мы не меняем. Работаем с процессом вокруг них: правила, сверка, исключения, документы и обращения. 1С, TMS, WMS, CRM (Битрикс24, amoCRM), ЭДО, Excel и мессенджеры остаются источником данных.</p>
+      </details>
+      <details class="acc">
+        <summary>Что, если ИИ ошибётся?</summary>
+        <p>Юридически значимые действия выполняет человек. Система ведёт журнал: что сделала и на каких данных. На старте ассистент готовит черновик и не действует самостоятельно.</p>
+      </details>
+      <details class="acc">
+        <summary>Где хранятся данные?</summary>
+        <p>Если в проекте есть персональные данные, по умолчанию храним их в России и подписываем соглашение о неразглашении. Для диагностики достаточно выгрузок. Что передавать, согласуем заранее.</p>
+      </details>
+      <details class="acc">
+        <summary>Нужно ли давать доступ к рабочим системам и паролям?</summary>
+        <p>Нет. Для диагностики достаточно выгрузок. Доступ к системам для запуска контура согласуем отдельно и ограничим нужным объёмом.</p>
+      </details>
+      <details class="acc">
+        <summary>Кто выполняет работу?</summary>
+        <p>У проекта один ответственный: менеджер проекта ведёт задачу от разбора до сдачи и отвечает за срок. К работе при необходимости привлекаются специалисты студии, состав команды фиксируется в договоре.</p>
+      </details>
+      <details class="acc">
+        <summary>Что, если в процессе нечего автоматизировать?</summary>
+        <p>Мы скажем об этом по итогам диагностики. Карта процесса и расчёт потерь остаются у вас независимо от решения.</p>
+      </details>
+      <details class="acc">
+        <summary>Можно ли начать без договора?</summary>
+        <p>Разбор на 15 минут бесплатный и без договора. Диагностику и дальнейшие этапы оформляем договором: он фиксирует объём, срок, результат и порядок передачи данных.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section alt" id="quiz">
+    <div class="wrap quiz-wrap">
+      <div class="quiz-intro">
+        <p class="kicker">Предварительный разбор</p>
+        <h2>Опишите процесс — покажем, с чего начать</h2>
+        <p class="lead">Пять коротких экранов. Печатать почти ничего не нужно: ответы выбираются кликом.</p>
+        <div class="quiz-side">
+          <div class="hero-founder">
+            <img src="assets/founder-avatar.jpg" alt="Вячеслав Палеха" width="56" height="56">
+            <div>
+              <b>Вячеслав Палеха, основатель</b>
+              <span>Отвечаем в течение рабочего дня</span>
+            </div>
+          </div>
+          <a class="btn ghost" href="https://t.me/vpalekha" target="_blank" rel="noopener">Написать в Telegram</a>
+          <div class="quiz-next">
+            <h3>Что будет дальше</h3>
+            <ul class="check">
+              <li>Ответ в течение рабочего дня</li>
+              <li>Разбор 15 минут, бесплатно</li>
+              <li>Скажем, если автоматизация не нужна</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="quiz-app"></div>
+    </div>
+  </section>
+
   <section class="section" id="contacts">
     <div class="wrap">
       <div class="cta">
-        <p class="kicker">Следующий шаг</p>
+        <p class="kicker">Контакты</p>
         <h2>Есть процесс, где сотрудники тратят время на рутину?</h2>
-        <p class="lead">Опишите задачу в Telegram или на коротком звонке. Если её можно закрыть макросом в Excel или автоматизация нецелесообразна, скажу об этом прямо и не возьму заказ. Отвечаю обычно в тот же рабочий день.</p>
+        <p class="lead">Опишите задачу в короткой форме или напишите в Telegram. Разбор занимает 15 минут и бесплатный. Если задачу можно закрыть макросом в Excel или автоматизация нецелесообразна, мы скажем об этом сразу.</p>
         <div class="cta-actions">
-          <a class="btn" href="https://t.me/vpalekha" target="_blank" rel="noopener">Написать в Telegram</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/vyacheslav-palekha" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="#quiz">Разобрать процесс: 15 минут бесплатно</a>
+          <a class="btn ghost" href="https://t.me/vpalekha" target="_blank" rel="noopener">Написать в Telegram</a>
         </div>
         <div class="contacts">
           <a href="https://t.me/vpalekha" target="_blank" rel="noopener">Telegram @vpalekha</a>
-          <a href="https://marketplace.zerocoder.ru/zerocoder/21934" target="_blank" rel="noopener">Профиль на маркетплейсе Zerocoder</a>
+          <a href="mailto:info@aislava.space">info@aislava.space</a>
+          <a href="https://www.linkedin.com/in/vyacheslav-palekha" target="_blank" rel="noopener">LinkedIn</a>
         </div>
+        <p class="fine cta-note">Отвечаем в течение рабочего дня. Данные из квиза нужны только для ответа на заявку, подробности в <a href="privacy.html">политике обработки данных</a>.</p>
       </div>
     </div>
   </section>
@@ -308,12 +587,11 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <img src="assets/logo/ai-slava-horizontal-on-dark.svg" alt="AI SLAVA">
-    <span>Аудит процессов · цифровая трансформация · ИИ для логистики</span>
-    <span>Черновик v0.2 · 03.11.2026</span>
+    <img src="assets/logo/ai-slava-horizontal-on-dark.svg" alt="AI SLAVA" width="170" height="26">
+    <span>© 2026 AI SLAVA · Палеха Вячеслав Александрович, самозанятый (плательщик налога на профессиональный доход), ИНН 540523512242 · <a href="mailto:info@aislava.space">info@aislava.space</a> · <a href="privacy.html">Политика обработки данных</a></span>
   </div>
 </footer>
 
+<script src="quiz.js" defer></script>
 </body>
 </html>
-
