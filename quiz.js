@@ -78,8 +78,8 @@
     }
     if (typeof ym === "function") {
       try {
-        if (params) ym(114165039, "reachGoal", goal, params);
-        else ym(114165039, "reachGoal", goal);
+        if (params) ym(114189851, "reachGoal", goal, params);
+        else ym(114189851, "reachGoal", goal);
       } catch (e) {}
     }
   }
