@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кейс: AI-ассистент для транспортной компании — AI SLAVA</title>
+  <meta name="description" content="Тестовый проект: ассистент первой линии отвечает по регламентам за 2–3 секунды. Методика проверки, ограничения и пример расчёта эффекта.">
+  <meta name="theme-color" content="#0B162A">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none'">
+  <script>if (window.top !== window.self) { try { window.top.location = window.self.location; } catch (e) {} }</script>
+  <link rel="canonical" href="https://aislava.space/cases/logistics-assistant.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="AI SLAVA">
+  <meta property="og:url" content="https://aislava.space/cases/logistics-assistant.html">
+  <meta property="og:title" content="Кейс: AI-ассистент для транспортной компании — AI SLAVA">
+  <meta property="og:description" content="Ассистент первой линии отвечает по регламентам за 2–3 секунды. Методика, ограничения и пример расчёта эффекта.">
+  <meta property="og:image" content="https://aislava.space/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Кейс: AI-ассистент для транспортной компании — AI SLAVA">
+  <meta name="twitter:description" content="Ассистент первой линии отвечает по регламентам за 2–3 секунды.">
+  <meta name="twitter:image" content="https://aislava.space/assets/og-image.png">
+
+  <link rel="icon" href="../assets/logo/ai-slava-mark-on-dark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <script src="../metrika.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../"><img src="../assets/logo/ai-slava-horizontal-on-dark.svg" alt="AI SLAVA"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Навигация">
+      <a href="../#automate">Решения</a>
+      <a href="../#process">Как работаем</a>
+      <a href="../#case">Кейс</a>
+      <a href="../#contacts">Контакты</a>
+    </nav>
+    <a class="btn" href="../#quiz" data-track="cta_click">Бесплатный разбор</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero case-hero">
+    <div class="wrap narrow">
+      <p class="kicker">Кейс · Логистика</p>
+      <h1>Ассистент первой линии для грузоперевозчика</h1>
+      <p class="lead">Ответ по регламенту за 2–3 секунды. Тестовый проект на открытых материалах транспортной компании — не внедрение у конкретного клиента.</p>
+      <div class="proof-grid" style="margin-top:28px">
+        <div class="stat"><b>10 из 10</b><span>сценариев чек-листа</span></div>
+        <div class="stat"><b>15</b><span>регламентов в базе</span></div>
+        <div class="stat"><b>2–3 с</b><span>время ответа</span></div>
+      </div>
+      <p class="fine" style="margin-top:14px">Прогон чек-листа: 21.07.2026. После корректировки доля ответов с указанием источника выросла с 43% до 100%.</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap narrow doc case-doc">
+      <h2>Задача</h2>
+      <p>Операторы тратят время на типовые вопросы клиентов: тарифы, упаковка, документы, терминал, претензии. Ответ должен быть точным и ссылаться на конкретный регламент. Сложные случаи и всё, что влияет на деньги или условия перевозки, остаются у человека.</p>
+
+      <h2>Что сделано</h2>
+      <p>Ассистент в Telegram принимает вопрос, ищет ответ в базе из 15 регламентов и называет документ и раздел. До обращения к модели:</p>
+      <ul>
+        <li>запрещённые к перевозке грузы распознаются и получают готовый ответ;</li>
+        <li>вопросы вне темы получают вежливый отказ;</li>
+        <li>попытки сменить роль ассистента передаются оператору.</li>
+      </ul>
+      <p>Стек тестового контура: Telegram, n8n, YandexGPT Lite, векторная база знаний. В клиентских проектах персональные данные по умолчанию храним в России.</p>
+
+      <figure class="scheme">
+        <img src="../assets/schemes/scheme-3-assistant-flow.svg" alt="Сценарий ассистента: вопрос, проверка, поиск по регламентам, ответ или передача оператору" width="1040" height="440" loading="lazy">
+      </figure>
+
+      <h2>Как проверяли</h2>
+      <p>Чек-лист из 10 сценариев на открытых регламентах. Цель — не «красивый ответ», а проверяемое поведение: источник в ответе, отказ вне темы, эскалация запрещённого и ролевых атак.</p>
+      <div class="card" style="margin:18px 0 22px">
+        <p class="mock-label">Состав чек-листа</p>
+        <ul class="case-points" style="margin:0">
+          <li>Тариф и условия перевозки</li>
+          <li>Упаковка и габариты</li>
+          <li>Комплект документов</li>
+          <li>Терминал и режим работы</li>
+          <li>Претензия / повреждение</li>
+          <li>Запрещённый груз</li>
+          <li>Вопрос вне темы</li>
+          <li>Попытка сменить роль ассистента</li>
+          <li>Уточняющий вопрос по уже найденному регламенту</li>
+          <li>Запрос без достаточных данных</li>
+        </ul>
+      </div>
+      <p>Результат: 10 из 10 сценариев пройдено. Указание источника в ответе: было 43%, стало 100% после правки промпта и правил выдачи.</p>
+
+      <h2>Что остаётся у сотрудника</h2>
+      <p>Сложные случаи, претензии, исключения и любые решения, которые влияют на деньги, ответственность или условия перевозки. Ассистент готовит черновик и ссылку на регламент; юридически значимое действие подписывает человек.</p>
+
+      <h2>Ограничения теста</h2>
+      <ul>
+        <li>Это не коммерческое внедрение и не связано с компанией, чьи публичные регламенты использованы.</li>
+        <li>База знаний — 15 открытых документов, без внутренних инструкций клиента.</li>
+        <li>Не измерялись часы операторов, объём реальных обращений и стоимость эксплуатации в продакшене.</li>
+        <li>Цифры относятся к прогону чек-листа 21.07.2026, а не к месяцу работы у заказчика.</li>
+      </ul>
+
+      <h2>Пример расчёта потенциального эффекта</h2>
+      <p>Ниже — <b>иллюстративная модель</b>, не результат внедрения. Она нужна, чтобы руководитель мог прикинуть порядок величины на своих цифрах.</p>
+      <div class="card" style="margin:18px 0 22px">
+        <p class="mock-label">Модель (не факт внедрения)</p>
+        <ul>
+          <li>Типовых вопросов первой линии: 40 в день</li>
+          <li>Среднее время ответа оператора: 3 минуты</li>
+          <li>20 рабочих дней в месяце</li>
+          <li>Стоимость часа оператора (пример): 500 ₽</li>
+        </ul>
+        <p style="margin:12px 0 0;color:var(--cloud)">40 × 3 мин = 2 ч/день → 40 ч/мес → ориентир экономии порядка 20 000 ₽/мес на одну линию, если ассистент закрывает эти типовые вопросы.</p>
+      </div>
+      <p class="fine">Подставьте свои объём, время и ставку часа. Реальный эффект зависит от доли типовых обращений, качества регламентов и дисциплины эскалации. Коммерческий результат фиксируем только после диагностики на ваших данных.</p>
+
+      <h2>Демо</h2>
+      <div class="demo" style="max-width:560px">
+        <video controls preload="metadata" playsinline poster="../assets/pek-bot-demo-poster.jpg" aria-label="Запись диалога в Telegram">
+          <source src="../assets/pek-bot-demo.mp4" type="video/mp4">
+        </video>
+        <div class="demo-text">
+          <div class="mock-label">Запись · 0:52 · ускорено в 3 раза</div>
+          <p>Диалог в Telegram: тариф, упаковка, документы, терминал, претензия.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta">
+        <p class="kicker">Следующий шаг</p>
+        <h2>Обсудим такой контур для вашей компании</h2>
+        <p class="lead">15 минут бесплатного разбора: есть ли смысл в ассистенте первой линии на ваших регламентах и какой процесс брать первым.</p>
+        <div class="cta-actions">
+          <a class="btn" href="../#quiz" data-track="cta_click">Найти потери в моём процессе</a>
+          <a class="btn ghost" href="https://t.me/vpalekha" target="_blank" rel="noopener" data-track="telegram_click">Написать в Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <img src="../assets/logo/ai-slava-horizontal-on-dark.svg" alt="AI SLAVA" width="170" height="26">
+    <span>© 2026 AI SLAVA · <a href="../">На главную</a> · <a href="../privacy.html">Политика обработки данных</a></span>
+  </div>
+</footer>
+
+<script src="../site.js" defer></script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114165039" style="position:absolute;left:-9999px" alt=""></div></noscript>
+</body>
+</html>

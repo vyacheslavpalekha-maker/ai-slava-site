@@ -63,13 +63,32 @@
     }
   ];
 
-  var state = { step: 0, answers: {}, done: false };
+  var state = { step: 0, answers: {}, done: false, started: false };
   var host = location.hostname;
   var local = host === "127.0.0.1" || host === "localhost";
   var WEBHOOK = local
     ? "http://127.0.0.1:5678/webhook/quiz-lead"
     : "https://n8n.aislava.space/webhook/quiz-lead";
   var MAX_FIELD = 200;
+
+  function track(goal, params) {
+    if (typeof window.aislavaTrack === "function") {
+      window.aislavaTrack(goal, params);
+      return;
+    }
+    if (typeof ym === "function") {
+      try {
+        if (params) ym(114165039, "reachGoal", goal, params);
+        else ym(114165039, "reachGoal", goal);
+      } catch (e) {}
+    }
+  }
+
+  function markStart() {
+    if (state.started) return;
+    state.started = true;
+    track("quiz_start");
+  }
 
   function clip(s) {
     return String(s || "").trim().slice(0, MAX_FIELD);
@@ -109,6 +128,7 @@
   }
 
   function toggle(screen, value) {
+    markStart();
     if (screen.type === "multi") {
       var cur = state.answers[screen.id] ? state.answers[screen.id].slice() : [];
       var i = cur.indexOf(value);
@@ -141,8 +161,11 @@
 
   function next() {
     if (!canNext()) return;
+    markStart();
     if (state.step < screens.length) {
+      var from = state.step + 1;
       state.step += 1;
+      track("quiz_step", { step: from, next: state.step + 1 });
       render();
       return;
     }
@@ -182,7 +205,8 @@
       if (!res.ok) throw new Error("webhook " + res.status);
       state.done = true;
       state.mock = false;
-      if (typeof ym === "function") ym(114165039, "reachGoal", "quiz_lead");
+      track("quiz_lead");
+      track("lead_submit_success");
       render();
     }).catch(function () {
       state.done = true;
@@ -207,8 +231,8 @@
         '<p class="muted">Пока можно скачать образец отчёта диагностики или написать в Telegram.</p>' +
         (state.mock ? '<p class="fine">Автоматическая отправка сейчас недоступна. Напишите в Telegram — так заявка точно дойдёт.</p>' : "") +
         '<div class="quiz-nav">' +
-          '<a class="btn" href="assets/AI-SLAVA_obrazets_otcheta_diagnostiki.pdf" target="_blank" rel="noopener">Скачать образец отчёта</a>' +
-          '<a class="btn ghost" href="https://t.me/vpalekha" target="_blank" rel="noopener">Написать в Telegram</a>' +
+          '<a class="btn" href="assets/AI-SLAVA_obrazets_otcheta_diagnostiki.pdf" target="_blank" rel="noopener" data-track="diagnostic_pdf_download">Скачать образец отчёта</a>' +
+          '<a class="btn ghost" href="https://t.me/vpalekha" target="_blank" rel="noopener" data-track="telegram_click">Написать в Telegram</a>' +
         "</div>" +
       "</div>";
   }
